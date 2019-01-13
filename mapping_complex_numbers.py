@@ -6,7 +6,7 @@ import math
 
 density = 1/250 # 1 unit per 800 pixels
 density2 = 1/250 # 1 unit per 200 pixels
-image_dir = "C:/Users/yashp/Desktop/graph.png"
+image_dir = "C:/Users/yashp/Documents/Python/mapping_complex_functions/testCases/color_wheel.png"
 
 image = cv2.imread(image_dir)
 image_x_res = image.shape[1]
@@ -82,13 +82,13 @@ transformed_image_final = cv2.inpaint(transformed_image_final, transformed_image
 
 # plot images
 plt.figure(figsize = (13, 7))
-plt.subplot(221)
+plt.subplot(121)
 plt.imshow(image)
-plt.subplot(222)
-plt.imshow(transformed_image)
-plt.subplot(223)
-plt.imshow(transformed_image_mask)
-plt.subplot(224)
+#plt.subplot(222)
+#plt.imshow(transformed_image)
+#plt.subplot(223)
+#plt.imshow(transformed_image_mask)
+plt.subplot(122)
 plt.imshow(transformed_image_final)
 plt.show()
 # plt.savefig('z_sqr_func' + str(i) + '.svg', dpi = 750, format = 'svg')
